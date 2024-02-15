@@ -15,8 +15,7 @@ namespace ncc_lab_prameshwor
             {
                 sum =sum + i;
             }
-            Console.WriteLine("sum = " +sum);
-
+            Console.WriteLine("sum = " + sum);
         }
     }
 }
