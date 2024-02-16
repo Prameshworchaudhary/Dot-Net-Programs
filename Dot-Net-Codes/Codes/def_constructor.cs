@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace default_constructor
 {
     class def_const
@@ -18,5 +18,5 @@ namespace default_constructor
             Console.WriteLine(obj.num);
         }
     }
-   
+
 }
