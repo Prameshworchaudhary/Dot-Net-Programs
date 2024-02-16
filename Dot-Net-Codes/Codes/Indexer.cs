@@ -1,60 +1,43 @@
-using System;
-
-namespace Indexer
+using system;
+namespace ncc_lab_prameshwor
 {
-    class employee
+    class circle
     {
-        int eid;
-        string name;
-        double salary;
-        string department;
-
-        public employee(int eid, string name, double salary, string department)
+        private double radius = 7.87;
+        //property
+        public double Radius
         {
-            this.eid = eid;
-            this.name = name;
-            this.salary = salary;
-            this.department = department;
-        }
-        public object this[int op]
-        {
+            //get accessor
             get
             {
-                if (op == 0)
-                    return this.eid;
-                else if (op == 1)
-                    return this.name;
-                else if (op == 2)
-                    return this.salary;
-                else if (op == 3)
-                    return this.department;
-                else
-                    return "invalide";
+                return radius;
             }
+            //set accessor
             set
             {
-                if (op == 0)
-                    this.eid = (int)value;
-                else if (op == 1)
-                    this.name = (string)value;
-                else if (op == 2)
-                    this.salary = (double)value;
-                else if (op == 3)
-                    this.department = (string)value;
-                else
-                    Console.WriteLine("invalide");
-
+                radius = value;
             }
         }
-
+        //getter method
+        public double getradius()
+        {
+            return radius;
+        }
+        //setter method
+        public void setradius(double radius)
+        {
+            this.radius = radius;
+        }
     }
-    public class Program
+    internal class propertydemo
     {
         static void Main(string[] args)
         {
-            employee emp1;
-            emp1 = new employee(101, "hari parsad", 12000.22, "IT");
-            Console.WriteLine("name = " + emp1[1]);
+            circle c1 = new circle();
+            //c1.setradius(12.5);
+            c1.Radius = 12.45;
+            //  Console.WriteLine("value of radius= " + c1.getradius());
+            Console.WriteLine("value of radius= " + c1.Radius);
         }
     }
 }
