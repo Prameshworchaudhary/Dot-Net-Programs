@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Indexer
 {
@@ -11,11 +11,11 @@ namespace Indexer
 
         public employee(int eid, string name, double salary, string department)
         {
-			this.eid=eid;
-			this.name=name;
-			this.salary=salary;
-			this.department=department;
-		}
+            this.eid = eid;
+            this.name = name;
+            this.salary = salary;
+            this.department = department;
+        }
         public object this[int op]
         {
             get
