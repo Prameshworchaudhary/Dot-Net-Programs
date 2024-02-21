@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using static inheritence.program;
 
 namespace inheritence
@@ -10,12 +10,12 @@ namespace inheritence
             public void display()
             {
                 Console.WriteLine("i am from parent ");
-                
+
             }
         }
-        public class child_class:parent_class
+        public class child_class : parent_class
         {
-            
+
         }
     }
     internal class property
