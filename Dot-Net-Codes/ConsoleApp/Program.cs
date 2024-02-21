@@ -1,40 +1,33 @@
 ﻿using System;
 
-namespace polymorphism
+namespace abstract_class
 {
-     class animal
+    abstract class animal
     {
-        public virtual void animal_sound()
+        public abstract void animal_sound();
+
+        public void display()
         {
-            Console.WriteLine("sound of animal.");
+            Console.WriteLine("sound of the animal ");
         }
     }
-     class pig:animal
-    {
-        public override void animal_sound()
-        {
-            Console.WriteLine("the pig says: wee wee");
-        }
-    }
+
     class dog : animal
     {
         public override void animal_sound()
         {
-            Console.WriteLine("the dog say: baw wow ");
+            Console.WriteLine("the dog barks");
         }
+
     }
 
-    internal class class_polymmorphism
+    internal class program
     {
         static void Main(string[] args)
         {
-            animal a1 = new animal();
-            animal  my_pig = new pig();
-            animal my_dog = new dog();
-            a1.animal_sound();
-            my_pig.animal_sound();
-            my_dog.animal_sound();
-
+            dog d1 = new dog();
+            d1.animal_sound();
+            d1.display();
 
         }
     }
