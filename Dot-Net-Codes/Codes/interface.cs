@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 
 namespace interface_class
 {
     interface animal
     {
-       void animal_sound();
+        void animal_sound();
         void run();
 
-       
+
     }
 
     class dog : animal
@@ -45,7 +45,7 @@ namespace interface_class
             d1.run();
             c1.animal_sound();
             c1.run();
-       
+
         }
     }
 }
