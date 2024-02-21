@@ -1,29 +1,41 @@
 ﻿using System;
-using static inheritence.program;
 
-namespace inheritence
+namespace polymorphism
 {
-    class program
+     class animal
     {
-        public class parent_class
+        public virtual void animal_sound()
         {
-            public void display()
-            {
-                Console.WriteLine("i am from parent ");
-                
-            }
-        }
-        public class child_class:parent_class
-        {
-            
+            Console.WriteLine("sound of animal.");
         }
     }
-    internal class property
+     class pig:animal
+    {
+        public override void animal_sound()
+        {
+            Console.WriteLine("the pig says: wee wee");
+        }
+    }
+    class dog : animal
+    {
+        public override void animal_sound()
+        {
+            Console.WriteLine("the dog say: baw wow ");
+        }
+    }
+
+    internal class class_polymmorphism
     {
         static void Main(string[] args)
         {
-            child_class c1 = new child_class();
-            c1.display();
+            animal a1 = new animal();
+            animal  my_pig = new pig();
+            animal my_dog = new dog();
+            a1.animal_sound();
+            my_pig.animal_sound();
+            my_dog.animal_sound();
+
+
         }
     }
 }
