@@ -1,24 +1,24 @@
-﻿using System;
+using System;
 
 namespace method_override
 {
     public class father
     {
-        public  void marriage()
+        public virtual void marriage()
         {
             Console.WriteLine("arrange marriage");
         }
     }
     public class son : father
     {
-        public new void marriage()
+        public override void marriage()
         {
             Console.WriteLine("love marriage");
         }
     }
     public class daughter : father
     {
-        public new void marriage()
+        public override void marriage()
         {
             Console.WriteLine("court marriage");
         }
