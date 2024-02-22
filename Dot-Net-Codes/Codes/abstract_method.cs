@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace class_abstract
 {
     abstract class shape
@@ -9,7 +9,7 @@ namespace class_abstract
     {
         public override void draw()
         {
-            Console.WriteLine("draw rectangle");   
+            Console.WriteLine("draw rectangle");
         }
     }
     class circle : shape
