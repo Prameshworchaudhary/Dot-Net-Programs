@@ -1,42 +1,32 @@
 ﻿using System;
+using static delegate_method.addition;
 
-namespace struct_method
+namespace delegate_method
 {
-    public struct bike
+    class addition
     {
-        public int price;
-        public string model;
-        public string bike_name;
+        public delegate void addnum(int a, int b);
+        public delegate void subnum(int a, int b);
 
-        public bike(int p, string m, string b_name)
+        public void add(int a , int b)
         {
-            price = p;
-            model = m;
-            bike_name = b_name;
+            Console.WriteLine("addition of two number is : {0}", a + b);
         }
-        public void show_display()
+        public void sub(int a, int b)
         {
-            Console.WriteLine("price of bike : " + price);
-            Console.WriteLine("model of bike : " + model);
-            Console.WriteLine("bike name of bike : " + bike_name);
+            Console.WriteLine("subtraction of two number is : {0}", a - b);
         }
-        
     }
-    internal class teststruct
+    public class testdelegate
     {
         static void Main(string[] args)
         {
-            bike s = new bike(150000,"bmw","fz");
-            s.show_display();
-            bike b1;
-            b1.price = 15000;
-            b1.model= "bajaj";
-            b1.bike_name = "hero ";
-            b1.show_display();
+            addition a1 = new addition();
+            addnum obj1 = new addnum(a1.add);
+            subnum obj2 = new subnum(a1.sub);
+            obj1(100, 20);
+            obj2(150, 90);
 
-           
-
-           
         }
     }
 }
