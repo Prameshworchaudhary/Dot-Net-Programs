@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace struct_method
 {
@@ -20,23 +20,23 @@ namespace struct_method
             Console.WriteLine("model of bike : " + model);
             Console.WriteLine("bike name of bike : " + bike_name);
         }
-        
+
     }
     internal class teststruct
     {
         static void Main(string[] args)
         {
-            bike s = new bike(150000,"bmw","fz");
+            bike s = new bike(150000, "bmw", "fz");
             s.show_display();
             bike b1;
             b1.price = 15000;
-            b1.model= "bajaj";
+            b1.model = "bajaj";
             b1.bike_name = "hero ";
             b1.show_display();
 
-           
 
-           
+
+
         }
     }
 }
