@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace generic_method
 {
@@ -6,18 +6,18 @@ namespace generic_method
     {
         public T data1;
         public Z data2;
-        public void addition() 
+        public void addition()
         {
             //dynamic a = x;
             //dynamic b = y;
-            Console.WriteLine("sum is "+data1+data2);
+            Console.WriteLine("sum is " + data1 + data2);
         }
     }
     internal class test_generic
     {
         static void Main(string[] args)
         {
-            add<int,int> obj = new add<int, int>();
+            add<int, int> obj = new add<int, int>();
             obj.data1 = 5;
             obj.data2 = 4;
             obj.addition();
@@ -26,7 +26,7 @@ namespace generic_method
             //add<double, double> a2 = new add<double, double>();
             //a2.addition(2.5, 2.512);
 
-            Console.ReadLine();            
+            Console.ReadLine();
         }
     }
 }
