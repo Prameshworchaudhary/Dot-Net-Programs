@@ -1,34 +1,22 @@
 using System;
 
-namespace events_handel
+namespace generic_method
 {
-    public delegate void test_point();
-    public class process
+    public class operation
     {
-        public event test_point mouse;
-
-        public void show_display()
+        public void addition<T,Z>(T a,Z b)
         {
-            Console.WriteLine("start button");
-            onmouse();
-        }
-        protected virtual void onmouse()
-        {
-            mouse?.Invoke();
-        }
+            dynamic x = a;
+            dynamic y = b;
+            Console.WriteLine("sum is ", x + y);
 
+        }
     }
-    internal class testevents
+    internal class test_generic
     {
         static void Main(string[] args)
         {
-            process p1 = new process();
-            p1.mouse += p_process1;
-            p1.show_display();
-        }
-        static void p_process1()
-        {
-            Console.WriteLine("events handel");
+
         }
     }
 }

@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 
 namespace generic_method
 {
     public class add
     {
-        public void addition<T, Z>(T x, Z y) 
+        public void addition<T, Z>(T x, Z y)
         {
             dynamic a = x;
             dynamic b = y;
-            Console.WriteLine("sum is {0}",a+b);
+            Console.WriteLine("sum is {0}", a + b);
         }
     }
     internal class test_generic
@@ -22,7 +22,7 @@ namespace generic_method
             a1.addition<int, double>(5, 2.5);
             a1.addition<float, double>(5.2f, 2.5);
             a1.addition<string, double>("hello", 2.5);
-            Console.ReadLine();            
+            Console.ReadLine();
         }
     }
 }
