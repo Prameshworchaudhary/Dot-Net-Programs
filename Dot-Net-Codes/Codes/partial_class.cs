@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace partial_class
 {
@@ -16,7 +16,7 @@ namespace partial_class
     {
         public void userdetails()
         {
-            Console.WriteLine("name = "+name);
+            Console.WriteLine("name = " + name);
             Console.WriteLine("location = " + location);
         }
     }
