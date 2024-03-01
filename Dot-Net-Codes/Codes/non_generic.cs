@@ -1,4 +1,4 @@
-﻿//Example of NonGeneric Collection - ArrayList
+//Example of NonGeneric Collection - ArrayList
 using System;
 using System.Collections;
 namespace CollectionApplication
