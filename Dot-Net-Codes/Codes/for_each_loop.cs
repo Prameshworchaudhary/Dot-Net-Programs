@@ -8,7 +8,7 @@ namespace ncc_lab_prameshwor
         static void Main(string[] args)
         {
             string[] country = { "nepal", "india", "USA", "canada", "china" };
-            foreach (string x in )
+            foreach (string x in country )
             {
                 Console.WriteLine(x);
             }
