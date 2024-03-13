@@ -15,19 +15,19 @@ namespace IndexerIntValue
             _obtain_mark = obtain_mark;
         }
 
-        public object this[int number]
+        public object this[object number]
         {
             get
             {
-                if (number == 0)
+                if (number == "id")
                 {
                     return _s_id;
                 }
-                else if (number == 1)
+                else if (number == "name")
                 {
                     return _name;
                 }
-                else if (number == 2)
+                else if (number == "mark")
                 {
                     return _obtain_mark;
                 }
@@ -38,15 +38,15 @@ namespace IndexerIntValue
             }
             set
             {
-                if (number == 0)
+                if (number == "id")
                 {
                     _s_id = (int)value;
                 }
-                else if (number == 1)
+                else if (number == "name")
                 {
                     _name = (string)value;
                 }
-                else if (number == 2)
+                else if (number == "mark")
                 {
                     _obtain_mark = (double)value;
                 }
@@ -62,11 +62,11 @@ namespace IndexerIntValue
     {
         static void Main(string[] args)
         {
-            Student s1 = new Student(100, "Gopal", 85.6);
-            Console.WriteLine("Id of student: {0}\n Name: {1}\n Obtain Mark: {2}", s1[0], s1[1], s1[2]);
-            s1[2] = 95.75;
-            Console.WriteLine("update obtain mark : " + s1[2]);
-            Console.WriteLine("\nlab no : 4.a");
+            Student s1 = new Student(500, "hari", 89.6);
+            Console.WriteLine("Id of student: {0}\n Name: {1}\n Obtain Mark: {2}", s1["id"], s1["name"], s1["mark"]);
+            s1["mark"] = 98.03;
+            Console.WriteLine("update obtain mark : " + s1["mark"]);
+            Console.WriteLine("\nlab no : 4.b");
             Console.WriteLine("prameshwor chaudhary");
             Console.WriteLine("roll no : 17");
         }
