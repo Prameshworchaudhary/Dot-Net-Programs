@@ -1,22 +1,36 @@
 using System;
 
-namespace generic_method
+namespace EventApp
 {
-    public class operation
+    public delegate void MyEventHandler(string str);
+    public class Publisher
     {
-        public void addition<T,Z>(T a,Z b)
+        public event MyEventHandler OnValueAssign;
+        public string name;
+        public void SetName(string value)
         {
-            dynamic x = a;
-            dynamic y = b;
-            Console.WriteLine("sum is ", x + y);
-
+            name = value;
+            OnValueAssign?.Invoke(name);
         }
     }
-    internal class test_generic
+    public class Subscriber
     {
-        static void Main(string[] args)
+        public void ShowUpdate(string str)
         {
+            Console.WriteLine("You updated value as: " + str);
+        }
+    }
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Publisher p1 = new Publisher();
+            Subscriber s1 = new Subscriber();
+            p1.OnValueAssign += s1.ShowUpdate;
 
+            Console.Write("Enter a name: ");
+            string input = Console.ReadLine();
+            p1.SetName(input);
         }
     }
 }
