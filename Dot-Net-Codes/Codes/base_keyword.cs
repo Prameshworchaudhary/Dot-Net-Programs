@@ -13,7 +13,7 @@ namespace base_keyword
         public void show_color()
         {
             Console.WriteLine("color of parent class= " + base.color);
-            Console.WriteLine("COLOR OF child class = " + color);
+            Console.WriteLine("color of child class = " + color);
         }
 
     }
@@ -23,6 +23,10 @@ namespace base_keyword
         {
             dog1 d = new dog1();
             d.show_color();
+            Console.WriteLine("\nlab no: 5.a");
+            Console.WriteLine("prameshwor chaudhary");
+            Console.WriteLine("roll no : 17");
+
         }
     }
 }
