@@ -4,6 +4,7 @@ namespace method_override
 {
     public class father
     {
+
         public virtual void marriage()
         {
             Console.WriteLine("arrange marriage");
@@ -31,6 +32,10 @@ namespace method_override
             s.marriage();
             daughter d = new daughter();
             d.marriage();
+
+            Console.WriteLine("\n lab no : 6.a ");
+            Console.WriteLine("prameshwor chaudhary");
+            Console.WriteLine("roll no : 17 ");
         }
     }
 }

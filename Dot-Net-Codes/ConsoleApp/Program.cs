@@ -1,43 +1,43 @@
 ﻿using System;
 
-namespace base_keyword
+namespace polymorphism
 {
-    public class Animal
+    class animal
     {
-        public string color = "white";
-        public  Animal()
+        public virtual void animal_sound()
         {
-            Console.WriteLine("color of parent class= " + color);
-
-        }
-        public Animal(string name)
-        {
-            string name2 = name;
-            Console.WriteLine("name of dog : "+name);
-        }
-
-    }
-    public class dog1 : Animal
-    {
-        public dog1() : base()
-        {
-
-        }
-        public dog1(string name):base( name)
-        {
-
+            Console.WriteLine("sound of animal.");
         }
     }
-    internal class testbase
+    class pig : animal
+    {
+        public override void animal_sound()
+        {
+            Console.WriteLine("the pig says: wee wee");
+        }
+    }
+    class dog : animal
+    {
+        public override void animal_sound()
+        {
+            Console.WriteLine("the dog say: baw wow ");
+        }
+    }
+
+    internal class class_polymmorphism
     {
         static void Main(string[] args)
         {
-            dog1 d = new dog1();
-            dog1 d1 = new dog1("tommy");
-           
-            Console.WriteLine("\nlab no: 5.c");
+   
+            animal my_pig = new pig();
+            dog my_dog = new dog();
+            
+            my_pig.animal_sound();
+            my_dog.animal_sound();
+            Console.WriteLine("\nlab no 6.b");
             Console.WriteLine("prameshwor chaudhary");
             Console.WriteLine("roll no : 17");
+
 
         }
     }
