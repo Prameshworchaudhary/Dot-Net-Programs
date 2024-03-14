@@ -1,43 +1,39 @@
 ﻿using System;
+using System.Collections;                   // Contains 'ArrayList' class
 
-using System;
-
-namespace EventApp
+namespace ArrayListProgram
 {
-    public delegate void MyEventHandler(string str);
-    public class Publisher
-    {
-        public event MyEventHandler OnValueAssign;
-        public string name;
-        public void SetName(string value)
-        {
-            name = value;
-            OnValueAssign?.Invoke(name);
-        }
-    }
-    public class Subscriber
-    {
-        public void ShowUpdate(string str)
-        {
-            Console.WriteLine("You updated value as: " + str);
-        }
-    }
     public class Program
     {
         public static void Main(string[] args)
         {
-            Publisher p1 = new Publisher();
-            Subscriber s1 = new Subscriber();
-            p1.OnValueAssign += s1.ShowUpdate;
+            ArrayList aList1 = new ArrayList();
+            aList1.Add("Ram");
+            aList1.Add(21);                 // Different data types is allowed
+            aList1.Insert(0, "Shyam");                      // Insert item at index 0
 
-            Console.Write("Enter a name: ");
-            string input = Console.ReadLine();
-            p1.SetName(input);
-            Console.WriteLine("\n lab no: 9.e");
+            // Accessing element with the help of index
+            Console.WriteLine(aList1[0]);                   // Output: Ram
+            Console.WriteLine(aList1[1]);                   // Output: Shyam
+            Console.WriteLine(aList1.Count);                // Output: 3
+            Console.WriteLine(aList1.Capacity);             // Output: 4
+
+            aList1.RemoveAt(2);                             // Remove element from index 2
+                                                            // ArrayList traversal is same as Array traversal 
+            foreach (object obj in aList1)
+            {
+                Console.WriteLine(obj);
+            }
+
+            Console.WriteLine("\n lab no: 10.a");
             Console.WriteLine("prameshwor chaudhary");
             Console.WriteLine("roll no : 17");
         }
     }
 }
+
+        
+    
+
 
        
