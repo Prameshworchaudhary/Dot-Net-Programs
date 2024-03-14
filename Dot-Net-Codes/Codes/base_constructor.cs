@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 
 namespace base_keyword
 {
     public class Animal
     {
         public string color = "white";
-        public  Animal()
+        public Animal()
         {
             Console.WriteLine("color of parent class= " + color);
 
@@ -13,7 +13,7 @@ namespace base_keyword
         public Animal(string name)
         {
             string name2 = name;
-            Console.WriteLine("name of dog : "+name);
+            Console.WriteLine("name of dog : " + name);
         }
 
     }
@@ -23,7 +23,7 @@ namespace base_keyword
         {
 
         }
-        public dog1(string name):base( name)
+        public dog1(string name) : base(name)
         {
 
         }
@@ -34,7 +34,7 @@ namespace base_keyword
         {
             dog1 d = new dog1();
             dog1 d1 = new dog1("tommy");
-           
+
             Console.WriteLine("\nlab no: 5.c");
             Console.WriteLine("prameshwor chaudhary");
             Console.WriteLine("roll no : 17");
