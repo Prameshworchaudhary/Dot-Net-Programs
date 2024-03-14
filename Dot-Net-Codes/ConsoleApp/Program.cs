@@ -1,55 +1,49 @@
 ﻿using System;
 
-namespace interface_class
+namespace InterfaceApp
 {
-    interface animal
+    public interface IVehicle               // Interface 1
     {
-        void animal_sound();
-        void run();
-
-
+        public void ShowInfo();
+        public void Greet();
     }
-
-    class dog : animal
+    public interface IEngine                // Interface 2
     {
-        public void animal_sound()
-        {
-            Console.WriteLine("the dog sound baw wow");
-        }
-        public void run()
-        {
-            Console.WriteLine("dog is a animal");
-        }
-
+        public void Start();
+        public void Stop();
     }
-    class cat : animal
+    public class Car : IVehicle, IEngine    // Multiple Inheritance
     {
-        public void animal_sound()
+        public void ShowInfo()
         {
-            Console.WriteLine("the cat sound ");
+            Console.WriteLine("This is a Car");
         }
-        public void run()
+        public void Greet()
         {
-            Console.WriteLine("cat is  animal");
+            Console.WriteLine("Hello car drive!");
         }
-
+        public void Start()
+        {
+            Console.WriteLine("Car engine started!");
+        }
+        public void Stop()
+        {
+            Console.WriteLine("Car engine stopped!");
+        }
     }
-
-    internal class program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            dog d1 = new dog();
-            cat c1 = new cat();
-            d1.animal_sound();
-            d1.run();
-            c1.animal_sound();
-            c1.run();
+            Car c1 = new Car();
+            c1.ShowInfo();
+            c1.Greet();
+            c1.Start();
+            c1.Stop();
 
-            Console.WriteLine("\n lab no : 7.b");
+            Console.WriteLine("\nlab no 7.c");
             Console.WriteLine("prameshwor chaudhary");
             Console.WriteLine("roll no : 17");
-
         }
     }
 }
