@@ -1,36 +1,42 @@
 ﻿using System;
-using System.Collections;                   // Contains 'ArrayList' class
-
-namespace ArrayListProgram
+using System.Collections.Generic;
+// 'ArrayList' is deprecated and 'List' is the newer update
+namespace ListApp
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            ArrayList aList1 = new ArrayList();
-            aList1.Add("Ram");
-            aList1.Add(21);                 // Different data types is allowed
-            aList1.Insert(0, "Shyam");                      // Insert item at index 0
+            List<string> people = new List<string>();   // Creating 'List' of string data type
+            people.Add("Ram");                          // Inserting element in List
+            people.Add("Shyam");
+            people.Add("Hari");
 
-            // Accessing element with the help of index
-            Console.WriteLine(aList1[0]);                   // Output: Ram
-            Console.WriteLine(aList1[1]);                   // Output: Shyam
-            Console.WriteLine(aList1.Count);                // Output: 3
-            Console.WriteLine(aList1.Capacity);             // Output: 4
+            people.Insert(1, "Gopal");                  // Insert element at specified index
 
-            aList1.RemoveAt(2);                             // Remove element from index 2
-                                                            // ArrayList traversal is same as Array traversal 
-            foreach (object obj in aList1)
+            Console.WriteLine(people.Count);            // Output: 4
+                                                        // Check for particular element in the List
+            Console.WriteLine(people.Contains("Ram"));  // Output: True
+            Console.WriteLine(people.IndexOf("Shyam")); // Output: 2
+
+            people.RemoveAt(2);                         // Deleting element from specified index
+                                                        // List Traversal same as Array Traversal
+            foreach (string str in people)
             {
-                Console.WriteLine(obj);
+                Console.WriteLine(str);
             }
-
-            Console.WriteLine("\n lab no: 10.a");
+            Console.WriteLine("\n lab no: 10.b");
             Console.WriteLine("prameshwor chaudhary");
             Console.WriteLine("roll no : 17");
+
         }
     }
 }
+
+
+
+    
+
 
         
     
