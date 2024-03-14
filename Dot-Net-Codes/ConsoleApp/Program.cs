@@ -1,45 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
-// 'ArrayList' is deprecated and 'List' is the newer update
-namespace ListApp
+
+namespace GenericsExampleApp
 {
+    public class MyClass<T>                        // Generic Class
+    {
+        public T? value;                            // Generic Field
+        public void Sum(T x, T y)                   // Generic Method
+        {
+            dynamic a = x;
+            dynamic b = y;
+            Console.WriteLine($"Sum is: {a + b}");
+        }
+    }
     public class Program
     {
         public static void Main(string[] args)
         {
-            List<string> people = new List<string>();   // Creating 'List' of string data type
-            people.Add("Ram");                          // Inserting element in List
-            people.Add("Shyam");
-            people.Add("Hari");
+            MyClass<int> m1 = new MyClass<int>();       // The object is of type 'int' now
+            m1.Sum(5, 6);
+            m1.value = 5;
+            Console.WriteLine(m1.value);
 
-            people.Insert(1, "Gopal");                  // Insert element at specified index
-
-            Console.WriteLine(people.Count);            // Output: 4
-                                                        // Check for particular element in the List
-            Console.WriteLine(people.Contains("Ram"));  // Output: True
-            Console.WriteLine(people.IndexOf("Shyam")); // Output: 2
-
-            people.RemoveAt(2);                         // Deleting element from specified index
-                                                        // List Traversal same as Array Traversal
-            foreach (string str in people)
-            {
-                Console.WriteLine(str);
-            }
-            Console.WriteLine("\n lab no: 10.b");
+            MyClass<string> m3 = new MyClass<string>();   // The object is of type 'float' now
+            m3.Sum("Hello", "World");
+            m3.value = "Greeting";
+            Console.WriteLine(m3.value);
+            Console.WriteLine("\n lab no: 11");
             Console.WriteLine("prameshwor chaudhary");
             Console.WriteLine("roll no : 17");
-
         }
     }
 }
 
 
 
-    
 
 
-        
-    
 
 
-       
+
+
+
+
+
+
+
+
