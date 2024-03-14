@@ -1,22 +1,36 @@
 ﻿using System;
 
-namespace abstract_class
+namespace interface_class
 {
-    abstract class animal
+    interface animal
     {
-        public abstract void animal_sound();
+        void animal_sound();
+        void run();
 
-        public void display()
-        {
-            Console.WriteLine("sound of the animal ");
-        }
+
     }
 
     class dog : animal
     {
-        public override void animal_sound()
+        public void animal_sound()
         {
-            Console.WriteLine("the dog barks");
+            Console.WriteLine("the dog sound baw wow");
+        }
+        public void run()
+        {
+            Console.WriteLine("dog is a animal");
+        }
+
+    }
+    class cat : animal
+    {
+        public void animal_sound()
+        {
+            Console.WriteLine("the cat sound ");
+        }
+        public void run()
+        {
+            Console.WriteLine("cat is  animal");
         }
 
     }
@@ -26,12 +40,15 @@ namespace abstract_class
         static void Main(string[] args)
         {
             dog d1 = new dog();
+            cat c1 = new cat();
             d1.animal_sound();
-            d1.display();
+            d1.run();
+            c1.animal_sound();
+            c1.run();
 
-            Console.WriteLine("\n lab no : 7.a");
+            Console.WriteLine("\n lab no : 7.b");
             Console.WriteLine("prameshwor chaudhary");
-            Console.WriteLine("roll n: 17");
+            Console.WriteLine("roll no : 17");
 
         }
     }

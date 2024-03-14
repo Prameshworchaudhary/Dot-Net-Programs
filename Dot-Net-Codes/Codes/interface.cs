@@ -46,6 +46,10 @@ namespace interface_class
             c1.animal_sound();
             c1.run();
 
+            Console.WriteLine("\n lab no : 7.b");
+            Console.WriteLine("prameshwor chaudhary");
+            Console.WriteLine("roll no : 17");
+
         }
     }
 }
