@@ -1,48 +1,44 @@
 ﻿using System;
 
-namespace CustomExceptionApp
-{
-    public class InvalidAge : Exception             // Custom Exception
+namespace AttributeApp
+{   // Built in Attribute
+    [AttributeUsage(
+    AttributeTargets.Class |
+    AttributeTargets.Struct |
+    AttributeTargets.Constructor |
+    AttributeTargets.Field |
+    AttributeTargets.Property |
+    AttributeTargets.Method,
+    AllowMultiple = true)]
+    public class BugAttribute : Attribute               // Custom Attribute
     {
-        public InvalidAge() { }
-        public InvalidAge(string msg) : base(msg) { }
+        public string Name { get; set; }
+        public string Developer { get; set; }
+        public string Date { get; set; }
+        public BugAttribute() { }
+        public BugAttribute(string n, string dev)
+        {
+            Name = n;
+            Developer = dev;
+        }
     }
+    [Bug("Syntax Error", "Alex", Date = "2020-03-5")]
+    [Bug("For Loop Bug", "John", Date = "2020-03-6")]
     public class Program
     {
-        public static void CheckAge(int age)
-        {
-            try
-            {
-                if (age < 16)
-                {   // Deal with 'throw' keyword
-                    throw new InvalidAge("Age should be above 16");
-                }
-                else
-                {
-                    Console.WriteLine("Valied Age is: " + age);
-                }
-            }
-            catch (InvalidAge exp)
-            {
-                Console.WriteLine(exp.Message);
-            }
-            finally
-            {
-                Console.WriteLine("Age Checking Completed!");
-                
-            }
-
-        }
         public static void Main(string[] args)
         {
-            int age1 = 15;
-            int age2 = 20;
-
-            CheckAge(age1);
-            CheckAge(age2);
-            Console.WriteLine("\n lab no 15");
+            var attr = Attribute.GetCustomAttributes(typeof(Program));
+            foreach (var a in attr)
+            {
+                Console.WriteLine(a);
+            }
+            Console.WriteLine("\n lab no 16");
             Console.WriteLine("prameshwor chaudhary");
             Console.WriteLine("roll no : 17");
         }
     }
 }
+
+        
+    
