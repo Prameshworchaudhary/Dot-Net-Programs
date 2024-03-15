@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.IO;
 namespace file_handle
@@ -31,15 +31,15 @@ namespace file_handle
 
 
 
-    
 
 
 
-           
-        
-        
-    
 
 
-        
-    
+
+
+
+
+
+
+
