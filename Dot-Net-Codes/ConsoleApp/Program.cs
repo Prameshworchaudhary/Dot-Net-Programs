@@ -1,44 +1,38 @@
 ﻿using System;
+using System.Threading.Tasks;
 
-namespace AttributeApp
-{   // Built in Attribute
-    [AttributeUsage(
-    AttributeTargets.Class |
-    AttributeTargets.Struct |
-    AttributeTargets.Constructor |
-    AttributeTargets.Field |
-    AttributeTargets.Property |
-    AttributeTargets.Method,
-    AllowMultiple = true)]
-    public class BugAttribute : Attribute               // Custom Attribute
+class Program
+{
+    static async Task Main(string[] args)
     {
-        public string Name { get; set; }
-        public string Developer { get; set; }
-        public string Date { get; set; }
-        public BugAttribute() { }
-        public BugAttribute(string n, string dev)
-        {
-            Name = n;
-            Developer = dev;
-        }
+        Console.WriteLine("Start");
+
+        // Call the asynchronous method
+        await DoSomeAsyncWork();
+
+        Console.WriteLine("End");
     }
-    [Bug("Syntax Error", "Alex", Date = "2020-03-5")]
-    [Bug("For Loop Bug", "John", Date = "2020-03-6")]
-    public class Program
+
+    static async Task DoSomeAsyncWork()
     {
-        public static void Main(string[] args)
-        {
-            var attr = Attribute.GetCustomAttributes(typeof(Program));
-            foreach (var a in attr)
-            {
-                Console.WriteLine(a);
-            }
-            Console.WriteLine("\n lab no 16");
-            Console.WriteLine("prameshwor chaudhary");
-            Console.WriteLine("roll no : 17");
-        }
+        // Simulate an asynchronous operation that takes 2 seconds
+        await Task.Delay(2000);
+
+        // Print a message after the asynchronous operation completes
+        Console.WriteLine("Async work completed!");
+
+        Console.WriteLine("\n lab no 17");
+        Console.WriteLine("prameshwor chaudhary");
+        Console.WriteLine("roll no : 17");
     }
 }
+
+
+           
+        
+        
+    
+
 
         
     
