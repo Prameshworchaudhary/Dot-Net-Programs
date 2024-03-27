@@ -25,7 +25,7 @@ namespace base_keyword
     internal class testbase
     {
         static void Main(string[] args)
-        {
+        { 
             dog1 d = new dog1();
             d.show_color();
             Console.WriteLine("\nlab no: 5.b");

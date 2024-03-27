@@ -13,7 +13,7 @@ namespace Enum
         static void Main(string[] args)
         {
             level var = level.medium;
-            Console.WriteLine("level is " + var);
+            Console.WriteLine("level is " +(int)var);
             level l = level.high;
             Console.WriteLine("level is " + l);
         }
