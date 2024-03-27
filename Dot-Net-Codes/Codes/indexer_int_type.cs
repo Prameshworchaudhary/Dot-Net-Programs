@@ -15,7 +15,7 @@ namespace IndexerIntValue
             _obtain_mark = obtain_mark;
         }
 
-        public object this[object number]
+        public object this[int number]
         {
             get
             {
