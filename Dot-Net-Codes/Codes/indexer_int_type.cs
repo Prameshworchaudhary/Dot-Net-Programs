@@ -19,15 +19,15 @@ namespace IndexerIntValue
         {
             get
             {
-                if (number == 10f)
+                if (number == 0)
                 {
                     return _s_id;
                 }
-                else if (number == name)
+                else if (number == 1)
                 {
                     return _name;
                 }
-                else if (number == mark)
+                else if (number == 2)
                 {
                     return _obtain_mark;
                 }
@@ -38,15 +38,15 @@ namespace IndexerIntValue
             }
             set
             {
-                if (number == 10f)
+                if (number == 0)
                 {
                     _s_id = (int)value;
                 }
-                else if (number == name)
+                else if (number == 1)
                 {
                     _name = (string)value;
                 }
-                else if (number == mark)
+                else if (number == 2)
                 {
                     _obtain_mark = (double)value;
                 }
@@ -63,9 +63,9 @@ namespace IndexerIntValue
         static void Main(string[] args)
         {
             Student s1 = new Student(100, "Gopal", 85.6);
-            Console.WriteLine("Id of student: {0}\n Name: {1}\n Obtain Mark: {2}", s1[10f], s1[name], s1[mark]);
-            s1[mark] = 95.75;
-            Console.WriteLine("update obtain mark : " + s1[mark]);
+            Console.WriteLine("Id of student: {0}\n Name: {1}\n Obtain Mark: {2}", s1[0], s1[1], s1[2]);
+            s1[2] = 95.75;
+            Console.WriteLine("update obtain mark : " + s1[2]);
             Console.WriteLine("\nlab no : 4.a");
             Console.WriteLine("prameshwor chaudhary");
             Console.WriteLine("roll no : 17");
