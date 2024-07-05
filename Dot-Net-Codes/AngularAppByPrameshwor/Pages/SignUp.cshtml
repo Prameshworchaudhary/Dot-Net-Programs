@@ -1,0 +1,69 @@
+﻿@page
+@model SignUpModel
+@{
+    ViewData["Title"] = "Sign Up";
+}
+
+<h4>Your Name: Prameshwor chaudhary, Your RollNo: 17</h4>
+
+<form id="signupForm">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" />
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" />
+    </div>
+    <div>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" />
+    </div>
+    <button type="submit">Sign Up</button>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#signupForm").validate({
+            rules: {
+                username: {
+                    required: true,
+                    minlength: 5
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                password: {
+                    required: true,
+                    minlength: 6
+                },
+                confirmPassword: {
+                    required: true,
+                    equalTo: "#password"
+                }
+            },
+            messages: {
+                username: {
+                    required: "Please enter a username",
+                    minlength: "Your username must consist of at least 5 characters"
+                },
+                email: "Please enter a valid email address",
+                password: {
+                    required: "Please provide a password",
+                    minlength: "Your password must be at least 6 characters long"
+                },
+                confirmPassword: {
+                    required: "Please confirm your password",
+                    equalTo: "Password does not match"
+                }
+            }
+        });
+    });
+</script>
